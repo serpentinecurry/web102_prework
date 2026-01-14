@@ -171,5 +171,11 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 let [firstGame, secondGame, ...others] = sortedGames;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+const firstElement = document.createElement("p");
+firstElement.innerHTML = firstGame.name;
+firstGameContainer.appendChild(firstElement);
 
 // do the same for the runner up item
+const secondElement = document.createElement("p");
+secondElement.innerHTML = secondGame.name;
+secondGameContainer.appendChild(secondElement);
